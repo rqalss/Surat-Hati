@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu, Sayang</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #ffeb3b;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #loveLetter, #extraContent {
+            display: none;
+            font-size: 1.3em;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            white-space: pre-line;
+            line-height: 1.8;
+            text-align: justify;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            font-size: 1.3em;
+            padding: 14px 30px;
+            background: linear-gradient(45deg, #ff4e50, #ff7675);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ff7675, #ff4e50);
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <h1>Untukmu, yang bernama Wilda Natasya Putri Kasim yang sekarang aku panggil Sayangku ❤️</h1>
+    <button onclick="playLoveLetter()">💖 Play 💖</button>
+    <p id="loveLetter"></p>
+    <button id="nextButton" style="display: none;" onclick="showExtraContent()">Next ➡️</button>
+    <div id="extraContent" style="display: none;">
+        <iframe width="80%" height="400px"
+            src="https://drive.google.com/file/d/155BG_WE0LPA6Pkd8SRWgWGjW9f7Dk_TO/preview"
+            allow="autoplay"
+            style="border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+        </iframe>
+    </div>
+    <audio id="loveAudio" src="URL_VOICE_KAMU.mp3"></audio>
+    
+    <script>
+        function playLoveLetter() {
+            document.getElementById('loveLetter').style.display = 'block';
+            document.getElementById('loveAudio').play();
+            
+            let text = `Sayangku,
+
+Akhir-akhir ini kita jarang bertemu karena kesibukan yang tidak bisa dihindari. Kamu sibuk dengan kuliah, tugas, dan laporan praktikum yang menumpuk. Aku memahami bahwa semua itu sangat menyita waktumu, dan aku ingin kamu tahu bahwa aku selalu mendukungmu, meskipun kita tidak selalu bisa bertemu seperti dulu.
+
+Aku membelikan cereal ini bukan hanya karena kamu menyukainya, tetapi juga sebagai pengingat bahwa meskipun hari-harimu penuh dengan kesibukan, aku ingin tetap bisa memberikan sedikit kebahagiaan untukmu, walau dalam bentuk sederhana.
+
+Aku juga ingin meminta maaf jika selama ini aku kurang perhatian atau membosankan bagimu. Aku tidak pernah berniat membuatmu merasa seperti itu. Aku ingin kamu tahu bahwa aku selalu memikirkanmu, bahkan ketika kita terpisah oleh jarak dan waktu.
+
+Terima kasih telah tetap berada di sisiku, terima kasih atas semua yang telah kamu lakukan, dan terima kasih karena telah menjadi bagian terindah dalam hidupku. Aku sangat menghargai setiap percakapan kita, sekecil apa pun itu, dan aku ingin kita terus saling mendukung di tengah segala kesibukan ini.
+
+Aku berharap hubungan ini tetap kuat, penuh pengertian, dan selalu dipenuhi oleh cinta. Kamu adalah seseorang yang sangat berarti bagiku, dan perasaanku untukmu tidak akan pernah berubah.
+
+Tetap semangat dalam menjalani harimu, Sayang. Aku akan selalu ada untukmu. Aku mencintaimu, sekarang, esok, dan selamanya... ❤️`;
+            
+            let i = 0;
+            let speed = 50;
+            function typeWriter() {
+                if (i < text.length) {
+                    document.getElementById("loveLetter").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    document.getElementById("nextButton").style.display = "inline-block";
+                }
+            }
+            
+            typeWriter();
+        }
+
+        function showExtraContent() {
+            document.getElementById('extraContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
