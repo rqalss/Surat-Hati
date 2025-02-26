@@ -75,14 +75,23 @@
         button:active {
             transform: scale(0.95);
         }
+
+        #extraContent {
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
     <h1>Untukmu, yang bernama Wilda Natasya Putri Kasim yang sekarang aku panggil Sayangku ❤️</h1>
-    <button onclick="requestPassword()">💖 Play 💖</button>
+    <button onclick="playLoveLetter()">💖 Play 💖</button>
     <p id="loveLetter"></p>
     <button id="nextButton" style="display: none;" onclick="showExtraContent()">Next ➡️</button>
-    <div id="extraContent" style="display: none; text-align: center;">
+    <div id="extraContent" style="display: none;">
         <iframe width="80%" height="400px"
             src="https://drive.google.com/file/d/17LcycpkdQS0Ka3Dp-aySzwu1DJnsVuTV/preview"
             allow="autoplay"
@@ -92,20 +101,14 @@
     <audio id="loveAudio" src="URL_VOICE_KAMU.mp3"></audio>
     
     <script>
-        function requestPassword() {
-            let password = prompt("Masukkan password untuk membuka surat:");
-            if (password === "42022181") {
-                playLoveLetter();
-            } else {
-                alert("Password salah! Coba lagi.");
-            }
-        }
-
         function playLoveLetter() {
             document.getElementById('loveLetter').style.display = 'block';
             document.getElementById('loveAudio').play();
             
             let text = `Assalamualaikum sayangkuu...
+
+jangan dibuka dulu cereal nya sebelum di scan yahh hehehe😁
+tapi kalau sudah terlanjur ndkpapa kok...
 
 saya berikan cereal ini untuk sayang bukan cuma karena sayang suka sama cereal,tapi...saya mau sayang ingat kalo saya hadir untuk sayang bukan hanya sekedar teman chat tapi saya hadir karena mau memberi pemanis dalam setiap kepahitan hidupnya sayang🥰😘
 
