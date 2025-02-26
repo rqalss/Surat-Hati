@@ -87,7 +87,7 @@
     <div id="passwordPrompt">
         <h2>untuk mendapatkan password nya silahkan minta di orang yang memberikan kode qr ini...</h2>
         <input type="password" id="passwordInput" />
-        <button onclick="checkPassword()">Submit</button>
+        <button id="submitPassword">Submit</button>
     </div>
     <div id="content" style="display: none;">
         <h1>Untukmu, yang bernama Wilda Natasya Putri Kasim yang sekarang aku panggil Sayangku ❤️</h1>
@@ -108,7 +108,7 @@
     </div>
     
     <script>
-        function checkPassword() {
+        document.getElementById("submitPassword").addEventListener("click", function() {
             let password = document.getElementById("passwordInput").value;
             if (password === "42022181") {
                 document.getElementById("passwordPrompt").style.display = "none";
@@ -116,10 +116,10 @@
             } else {
                 alert("Password salah, coba lagi!");
             }
-        }
+        });
 
         function playLoveLetter() {
-            let text = "Haii sayangkuu...
+            document.getElementById("loveLetter").textContent = `Haii sayangkuu...
 
 jangan dibuka dlu cereal nya yahh hehehe😁
 tapi kalau sudah terlanjur ndkpapa kok...
@@ -211,30 +211,9 @@ dari Muhammad Rifqi Alsadhani.
 
 see youu yaahh sayangkuuu🤗🥰.
 
-...🦸🏻";
-            
+...🦸🏻`;
             document.getElementById("loveLetter").style.display = "block";
-            let i = 0;
-            let speed = 50;
-            function typeWriter() {
-                if (i < text.length) {
-                    document.getElementById("loveLetter").innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, speed);
-                } else {
-                    document.getElementById("nextButton").style.display = "inline-block";
-                }
-            }
-            typeWriter();
-        }
-
-        function showExtraContent() {
-            document.getElementById("extraContent").style.display = "block";
-            document.getElementById("videoButton").style.display = "inline-block";
-        }
-
-        function showVideo() {
-            document.getElementById("videoContent").style.display = "block";
+            document.getElementById("nextButton").style.display = "inline-block";
         }
     </script>
 </body>
