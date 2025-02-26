@@ -75,6 +75,15 @@
         button:active {
             transform: scale(0.95);
         }
+
+        #extraContent {
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +93,7 @@
     <button id="nextButton" style="display: none;" onclick="showExtraContent()">Next ➡️</button>
     <div id="extraContent" style="display: none;">
         <iframe width="80%" height="400px"
-            src="https://drive.google.com/file/d/155BG_WE0LPA6Pkd8SRWgWGjW9f7Dk_TO/preview"
+            src="https://drive.google.com/file/d/17LcycpkdQS0Ka3Dp-aySzwu1DJnsVuTV/preview"
             allow="autoplay"
             style="border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
         </iframe>
@@ -96,22 +105,42 @@
             document.getElementById('loveLetter').style.display = 'block';
             document.getElementById('loveAudio').play();
             
-            let text = `Sayangku,
+            let text = `Assalamualaikum sayangkuu...
 
-Akhir-akhir ini kita jarang bertemu karena kesibukan yang tidak bisa dihindari. Kamu sibuk dengan kuliah, tugas, dan laporan praktikum yang menumpuk. Aku memahami bahwa semua itu sangat menyita waktumu, dan aku ingin kamu tahu bahwa aku selalu mendukungmu, meskipun kita tidak selalu bisa bertemu seperti dulu.
+jangan dibuka dulu cereal nya sebelum di scan yahh hehehe😁
+tapi kalau sudah terlanjur ndkpapa kok...
 
-Aku membelikan cereal ini bukan hanya karena kamu menyukainya, tetapi juga sebagai pengingat bahwa meskipun hari-harimu penuh dengan kesibukan, aku ingin tetap bisa memberikan sedikit kebahagiaan untukmu, walau dalam bentuk sederhana.
+saya berikan cereal ini untuk sayang bukan cuma karena sayang suka sama cereal,tapi...saya mau sayang ingat kalo saya hadir untuk sayang bukan hanya sekedar teman chat tapi saya hadir karena mau memberi pemanis dalam setiap kepahitan hidupnya sayang🥰😘
 
-Aku juga ingin meminta maaf jika selama ini aku kurang perhatian atau membosankan bagimu. Aku tidak pernah berniat membuatmu merasa seperti itu. Aku ingin kamu tahu bahwa aku selalu memikirkanmu, bahkan ketika kita terpisah oleh jarak dan waktu.
+sayang...Aku cuma mau bilang Terimakasih untuk kamu yang sudah mau bertahan sejauh ini...
 
-Terima kasih telah tetap berada di sisiku, terima kasih atas semua yang telah kamu lakukan, dan terima kasih karena telah menjadi bagian terindah dalam hidupku. Aku sangat menghargai setiap percakapan kita, sekecil apa pun itu, dan aku ingin kita terus saling mendukung di tengah segala kesibukan ini.
+sayang...aku minta maaf yaah sudah buat hubungan ini jadi begitu² saja
 
-Aku berharap hubungan ini tetap kuat, penuh pengertian, dan selalu dipenuhi oleh cinta. Kamu adalah seseorang yang sangat berarti bagiku, dan perasaanku untukmu tidak akan pernah berubah.
+saya sadar diri kok sayang akhir akhir ini saya menjadi orang yang membosankan untuk sayang...
 
-Tetap semangat dalam menjalani harimu, Sayang. Aku akan selalu ada untukmu. Aku mencintaimu, sekarang, esok, dan selamanya... ❤️`;
+saya tahu kok sayang...belakangan ini rasa nya sayang sudah mulai memudar,saya sudah feeling soal itu,jauh sebelum kamu mengungkapkannya...
+
+sayang ingat ndk sihh waktu sayang pertama kali bilang kalo saya itu super hero nya sayang? 😁
+
+sayang mau tahu faktanya setelah sayang bilang begitu??
+
+setelah sayang bilang kalo saya adalah super hero nya sayang....sejak saat itulah saya mau memberikan sayang dengan setulus tulusnya hatiku tanpa tersisa buat sayang diriku sendiri🥰
+
+bareng bareng yaahh sayang kita perbaiki hubungan yang retak ini🥹🥰
+
+i need youu, i need hug from you, i need your kiss, i like your smile, i like your eyes, i like your lips, i like your nose, I like everything about you sayangkuu...
+
+and last...
+I Lovee Youu More Then You knoww sayangkuu🥰.
+
+dari Muhammad Rifqi Alsadhani.
+
+see youu yaahh sayangkuuu🤗🥰.
+
+...🦸🏻`;
             
             let i = 0;
-            let speed = 1;
+            let speed = 50;
             function typeWriter() {
                 if (i < text.length) {
                     document.getElementById("loveLetter").innerHTML += text.charAt(i);
