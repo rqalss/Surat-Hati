@@ -75,20 +75,11 @@
         button:active {
             transform: scale(0.95);
         }
-
-        #extraContent {
-            text-align: center;
-        }
-
-        iframe {
-            display: block;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body>
     <div id="passwordPrompt">
-        <h2>untuk mendapatkan password nya silahkan minta di orang yang memberikan kode qr ini.Syaratnya harus pakai vn dengan suara lembut dan membujuk seperti biasa yang diperintahkan oleh pemberi kode qr ini :D :</h2>
+        <h2>untuk mendapatkan password nya silahkan minta di orang yang memberikan kode qr ini...</h2>
         <input type="password" id="passwordInput" />
         <button onclick="checkPassword()">Submit</button>
     </div>
@@ -100,8 +91,7 @@
         <div id="extraContent" style="display: none;">
             <iframe width="80%" height="400px"
                 src="https://drive.google.com/file/d/17LcycpkdQS0Ka3Dp-aySzwu1DJnsVuTV/preview"
-                allow="autoplay"
-                style="border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+                allow="autoplay">
             </iframe>
         </div>
         <audio id="loveAudio" src="URL_VOICE_KAMU.mp3"></audio>
@@ -110,7 +100,7 @@
     <script>
         function checkPassword() {
             let password = document.getElementById("passwordInput").value;
-            if (password === "42022181") { // Ganti dengan password yang diinginkan
+            if (password === "42022181") {
                 document.getElementById("passwordPrompt").style.display = "none";
                 document.getElementById("content").style.display = "block";
             } else {
@@ -119,11 +109,16 @@
         }
 
         function playLoveLetter() {
-            document.getElementById('loveLetter').style.display = 'block';
-            document.getElementById('loveAudio').play();
+            let loveLetterElement = document.getElementById('loveLetter');
+            let audio = document.getElementById('loveAudio');
+            let nextButton = document.getElementById('nextButton');
             
-            let text = `Assalamualaikum Sayangku, 
-            Haii sayangkuu...
+            loveLetterElement.innerHTML = "";
+            loveLetterElement.style.display = 'block';
+            audio.currentTime = 0;
+            audio.play();
+            
+            let text = `Haii sayangkuu...
 
 jangan dibuka dlu cereal nya yahh hehehe😁
 tapi kalau sudah terlanjur ndkpapa kok...
@@ -216,16 +211,16 @@ dari Muhammad Rifqi Alsadhani.
 see youu yaahh sayangkuuu🤗🥰.
 
 ...🦸🏻`;
-            
             let i = 0;
             let speed = 50;
+            
             function typeWriter() {
                 if (i < text.length) {
-                    document.getElementById("loveLetter").innerHTML += text.charAt(i);
+                    loveLetterElement.innerHTML += text.charAt(i);
                     i++;
                     setTimeout(typeWriter, speed);
                 } else {
-                    document.getElementById("nextButton").style.display = "inline-block";
+                    nextButton.style.display = "inline-block";
                 }
             }
             
