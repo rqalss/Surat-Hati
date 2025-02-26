@@ -36,7 +36,7 @@
             border-radius: 10px;
         }
 
-        #loveLetter, #extraContent {
+        #loveLetter, #extraContent, #videoContent {
             display: none;
             font-size: 1.3em;
             background: rgba(255, 255, 255, 0.8);
@@ -93,6 +93,10 @@
                 src="https://drive.google.com/file/d/17LcycpkdQS0Ka3Dp-aySzwu1DJnsVuTV/preview"
                 allow="autoplay">
             </iframe>
+        </div>
+        <button id="videoButton" style="display: none;" onclick="showVideo()">Tampilkan Video 🎥</button>
+        <div id="videoContent" style="display: none;">
+            <iframe width="80%" height="400px" src="https://drive.google.com/file/d/NEW_VIDEO_ID/preview" allow="autoplay"></iframe>
         </div>
         <audio id="loveAudio" src="URL_VOICE_KAMU.mp3"></audio>
     </div>
@@ -225,6 +229,15 @@ see youu yaahh sayangkuuu🤗🥰.
             }
             
             typeWriter();
+        }
+
+        function showExtraContent() {
+            document.getElementById("extraContent").style.display = "block";
+            document.getElementById("videoButton").style.display = "inline-block";
+        }
+
+        function showVideo() {
+            document.getElementById("videoContent").style.display = "block";
         }
     </script>
 </body>
