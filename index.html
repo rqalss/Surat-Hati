@@ -75,6 +75,12 @@
         button:active {
             transform: scale(0.95);
         }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -95,8 +101,8 @@
             </iframe>
         </div>
         <button id="videoButton" style="display: none;" onclick="showVideo()">Tampilkan Video 🎥</button>
-        <div id="videoContent" style="display: none;">
-            <iframe width="80%" height="400px" src="https://drive.google.com/file/d/NEW_VIDEO_ID/preview" allow="autoplay"></iframe>
+        <div id="videoContent" class="video-container" style="display: none;">
+            <iframe width="80%" height="400px" src="https://drive.google.com/file/d/16mDA7cp9ycOEBDleJ9seVtGTuvFU5CRQ/preview" allow="autoplay"></iframe>
         </div>
         <audio id="loveAudio" src="URL_VOICE_KAMU.mp3"></audio>
     </div>
@@ -113,16 +119,7 @@
         }
 
         function playLoveLetter() {
-            let loveLetterElement = document.getElementById('loveLetter');
-            let audio = document.getElementById('loveAudio');
-            let nextButton = document.getElementById('nextButton');
-            
-            loveLetterElement.innerHTML = "";
-            loveLetterElement.style.display = 'block';
-            audio.currentTime = 0;
-            audio.play();
-            
-            let text = `Haii sayangkuu...
+            let text = "Haii sayangkuu...
 
 jangan dibuka dlu cereal nya yahh hehehe😁
 tapi kalau sudah terlanjur ndkpapa kok...
@@ -214,20 +211,20 @@ dari Muhammad Rifqi Alsadhani.
 
 see youu yaahh sayangkuuu🤗🥰.
 
-...🦸🏻`;
+...🦸🏻";
+            
+            document.getElementById("loveLetter").style.display = "block";
             let i = 0;
             let speed = 50;
-            
             function typeWriter() {
                 if (i < text.length) {
-                    loveLetterElement.innerHTML += text.charAt(i);
+                    document.getElementById("loveLetter").innerHTML += text.charAt(i);
                     i++;
                     setTimeout(typeWriter, speed);
                 } else {
-                    nextButton.style.display = "inline-block";
+                    document.getElementById("nextButton").style.display = "inline-block";
                 }
             }
-            
             typeWriter();
         }
 
