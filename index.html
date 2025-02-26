@@ -88,7 +88,7 @@
 </head>
 <body>
     <div id="passwordPrompt">
-        <h2>Masukkan Password:</h2>
+        <h2>untuk mendapatkan password nya silahkan minta di orang yang memberikan kode qr ini.Syaratnya harus pakai vn dengan suara lembut dan membujuk seperti biasa yang diperintahkan oleh pemberi kode qr ini :D :</h2>
         <input type="password" id="passwordInput" />
         <button onclick="checkPassword()">Submit</button>
     </div>
@@ -117,7 +117,120 @@
                 alert("Password salah, coba lagi!");
             }
         }
+
+        function playLoveLetter() {
+            document.getElementById('loveLetter').style.display = 'block';
+            document.getElementById('loveAudio').play();
+            
+            let text = `Assalamualaikum Sayangku, 
+            Haii sayangkuu...
+
+jangan dibuka dlu cereal nya yahh hehehe😁
+tapi kalau sudah terlanjur ndkpapa kok...
+
+saya berikan cereal ini untuk sayang bukan cuma karena sayang suka sama cereal,tapi...saya mau sayang ingat kalo saya hadir untuk sayang bukan hanya sekedar teman chat tapi saya hadir karena mau memberi pemanis dalam setiap kepahitan hidupnya sayang🥰😘
+
+sayang...Aku cuma mau bilang Terimakasih untuk kamu yang sudah mau bertahan sejauh ini,sudah perlihatkan ka hal hal yang baru,kenalin aku ke keluarga mu,ngajak aku makan bareng keluarga mu,menerima aku afjifj ahshgshg tiiit....,ehh...maaf typo😁hihihi
+
+...
+
+sayang...aku minta maaf yaah sudah buat hubungan ini jadi begitu² saja
+
+saya sadar diri kok sayang akhir akhir ini saya menjadi orang yang membosankan untuk sayang...
+
+saya sadar tidak se romantis dulu...
+
+saya tahu kok sayang...belakangan ini rasa nya sayang sudah mulai memudar,saya sudah feeling soal itu,jauh sebelum kamu mengungkapkannya,tapi percayalah saya tidak pernah memperdulikan soal itu,aku cuma bisa mencintaimu sepenuh hati hingga tiba saatnya kamu direbut super hero lain (amit² ya Allah🤲🏻🤲🏻☝🏻☝🏻)😌,sayang ingat ndk sihh waktu sayang pertama kali bilang kalo saya itu super hero nya sayang? 😁sayang mau tahu faktanya setelah sayang bilang begitu??
+
+kita tunggu setelah pesan pesan berikut...
+
+bercanda...
+
+1
+2
+3
+8
+18
+12
+20
+24
+
+
+bercanda (2)
+
+
+peace jangan marah✌🏻😁
+
+okee sayangkuu lanjuuutt
+
+setelah sayang bilang kalo saya adalah super hero nya sayang....sejak saat itulah saya mau memberikan sayang dengan setulus tulusnya hatiku tanpa tersisa buat sayang diriku sendiri🥰
+
+tunggu sayang...
+
+
+🦟
+
+
+ada nyamut...
+hehehe
+
+sayaang...aku sudah perkirakan kita bakalan jarang ketemu karena kesibukan kita masing masing, ditambah kita sudah mau masuk di bulan ramadhan kita pasti jarang ketemu,karena hal ituu saya minta tolong ke sayang bila tidak di samping ku jangan pernah ciptakan super hero yang lain secara diam diam yahh sayang, kecuali kita sudah tidak bersama sayang (amit amit ya Allah [2])🤲🏻🤲🏻☝🏻☝🏻😌🤲🏻🦟
+
+hmmm bahas apa lagi yaah...
+
+
+hewan apa...
+
+cacat☝🏻
+
+betulll hehehe
+
+🐎
+
+ehh malah jadi kuda
+
+apasih rifqi -_-
+...
+...
+...
+sayaangkuu
+cintakuu
+duniaku
+pacarkuu
+kekasihku
+cantikku
+...
+bareng bareng yaahh sayang kita perbaiki hubungan yang retak ini🥹🥰
+
+becaeuse...
+
+i need youu,i need hug from you,i need your kiss,i like your smile,i like your eyes,i like your lips,i like your nose,I like everything about you sayangkuu,jadi pliss dont let go🥹 apapun kekuranganku tegur aku sesakit apapun itu sayang,aku akan berusaha mengisi kekurangan itu dengan caraku sendiri 🥰
+
+
+and last...
+
+I Lovee Youu More Then You knoww sayangkuu🥰.
+
+dari Muhammad Rifqi Alsadhani.
+
+see youu yaahh sayangkuuu🤗🥰.
+
+...🦸🏻`;
+            
+            let i = 0;
+            let speed = 50;
+            function typeWriter() {
+                if (i < text.length) {
+                    document.getElementById("loveLetter").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    document.getElementById("nextButton").style.display = "inline-block";
+                }
+            }
+            
+            typeWriter();
+        }
     </script>
 </body>
 </html>
-
