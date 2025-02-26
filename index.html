@@ -119,7 +119,7 @@
         });
 
         function playLoveLetter() {
-            document.getElementById("loveLetter").textContent = `Haii sayangkuu...
+            const text = `Haii sayangkuu...
 
 jangan dibuka dlu cereal nya yahh hehehe😁
 tapi kalau sudah terlanjur ndkpapa kok...
@@ -212,8 +212,20 @@ dari Muhammad Rifqi Alsadhani.
 see youu yaahh sayangkuuu🤗🥰.
 
 ...🦸🏻`;
-            document.getElementById("loveLetter").style.display = "block";
-            document.getElementById("nextButton").style.display = "inline-block";
+            const loveLetterElement = document.getElementById("loveLetter");
+            loveLetterElement.style.display = "block";
+            let i = 0;
+            function typeText() {
+                if (i < text.length) {
+                    loveLetterElement.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeText, 50); 
+                } else {
+                    document.getElementById("nextButton").style.display = "inline-block";
+                }
+            }
+            loveLetterElement.textContent = "";
+            typeText();
         }
     </script>
 </body>
