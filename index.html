@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voice Note Untuk Wilda</title>
+  <title>Voice Note Untuk Wilda Natasya</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@
 </head>
 <body>
   <div class="container" id="authContainer">
-    <h1>Kapan Pertama Kali kamu memanggilku "sayang"</h1>
+    <h1>Masukkan Password</h1>
     <input type="password" id="password" placeholder="Password" />
     <button onclick="checkPassword()">Submit</button>
   </div>
@@ -54,7 +54,7 @@
     <h1>Untuk Wilda Natasya 💖</h1>
     <p>Aku ingin kamu mendengar sesuatu yang tulus dari hatiku.</p>
     <button id="playButton" onclick="playAudio()">Play Voice Note</button>
-    <audio id="audio" src="https://files.catbox.moe/84j5xd.mp3" onended="resetButton()"></audio>
+    <audio id="audio" src="https://files.catbox.moe/g6rcqy.m4a" onended="resetButton()"></audio>
   </div>
 
   <script>
@@ -71,7 +71,7 @@
     function playAudio() {
       const audio = document.getElementById('audio');
       const playButton = document.getElementById('playButton');
-      audio.play().catch(error => alert('Error memutar audio: ' + error.message));
+      audio.play();
       playButton.innerText = 'Playing...';
       playButton.disabled = true;
     }
